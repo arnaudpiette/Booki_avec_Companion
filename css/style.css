@@ -96,10 +96,54 @@ header{
     display:none;
 }
 
+/****** Filters ***********/
+
+.filters{
+    display:flex;
+    align-items:center;
+    margin-top:35px;
+    margin-bottom:35px;
+}
+
+.filters h2{
+    font-size:18px;
+    margin-right:30px;
+}
+
+.filters-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.filter-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    height:50px;
+    padding:0 20px;
+    border:2px solid #D9D9D9;
+    border-radius:25px;
+    background-color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.filter-icon{
+    width:22px;
+    height:22px;
+    flex-shrink:0;
+}
+
+.filter-btn:hover{
+    background-color:var(--filter-bg-color);
+}
+
 .logo{
     width:61px;
     height:auto;
-
     margin-top:30px;
 }
 
@@ -115,19 +159,14 @@ header{
 
 .nav-links a{
     display:block;
-
     padding-top:16px;
-
     border-top:2px solid transparent;
-
     text-decoration:none;
-
     transition:0.3s;
 }
 
 .nav-links a:hover{
     color:var(--main-color);
-
     border-top:2px solid var(--main-color);
 }
 
