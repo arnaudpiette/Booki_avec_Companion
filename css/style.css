@@ -26,6 +26,76 @@ header{
     height:79px;
 }
 
+/****** Search ***********/
+
+.search{
+    margin-top:30px;
+}
+
+.search h1{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.search p{
+    margin-top:0;
+    margin-bottom:35px;
+}
+
+.search-form{
+    display:flex;
+    align-items:center;
+}
+
+.location-icon{
+    width:50px;
+    height:49px;
+    background-color:var(--main-bg-color);
+    border-radius:15px 0 0 15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.location-svg{
+    width:14px;
+    height:auto;
+}
+
+.search-form input{
+    width:195px;
+    height:49px;
+
+    border-top:1px solid var(--main-bg-color);
+    border-bottom:1px solid var(--main-bg-color);
+    border-left:none;
+    border-right:none;
+    font-size:18px;
+    font-weight:700;
+    padding-left:20px;
+    outline:none;
+}
+
+.search-form input::placeholder{
+    color:black;
+}
+
+.search-form button{
+    height:49px;
+    border:none;
+    background-color:var(--main-color);
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    padding:0 16px;
+    border-radius:0 15px 15px 0;
+    cursor:pointer;
+}
+
+.search-icon{
+    display:none;
+}
+
 .logo{
     width:61px;
     height:auto;
