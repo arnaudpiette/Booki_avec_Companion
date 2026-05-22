@@ -215,8 +215,8 @@ a {
 
 .hebergements-and-populaires{
     display:flex;
-    justify-content:space-between;
-    gap:40px;
+    align-items:flex-start;
+    gap:30px;
 }
 
 .hebergements-and-populaires section{
@@ -294,7 +294,7 @@ a {
 
 /****** Populaires ***********/
 .populaires {
-    width: 25%;
+    width: 32%;
 }
 
 .populaires-title {
