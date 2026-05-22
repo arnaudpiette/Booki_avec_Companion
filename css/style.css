@@ -217,6 +217,10 @@ a {
     color: var(--main-bg-color)
 }
 
+.card-txt{
+    min-height:52px;
+}
+
 /****** Hebergements And Populaires ***********/
 
 .hebergements-and-populaires{
@@ -255,6 +259,7 @@ a {
     display:flex;
     flex-direction:column;
     width:100%;
+    height:100%;
 }
 
 .card-image{
