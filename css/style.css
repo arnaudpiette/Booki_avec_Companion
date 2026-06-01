@@ -24,6 +24,40 @@ header{
     align-items:flex-start;
 
     height:79px;
+
+.logo{
+    width:61px;
+    height:auto;
+    margin-top:30px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    width:162px;
+    text-align:center;
+}
+
+.nav-links a{
+    display:block;
+    padding-top:16px;
+    border-top:2px solid transparent;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:var(--main-color);
+    border-top:2px solid var(--main-color);
+}
+
+.nav-links a.active{
+    color:var(--main-color);
+    border-top:2px solid var(--main-color);
+}
 }
 
 /****** Search ***********/
@@ -141,39 +175,41 @@ header{
     background-color:var(--filter-bg-color);
 }
 
-.logo{
-    width:61px;
-    height:auto;
-    margin-top:30px;
-}
+/****** Info ***********/
 
-.nav-links{
+/****** Info ***********/
+
+.info{
     display:flex;
-    list-style:none;
+    align-items:center;
+    gap:10px;
+    margin-bottom:35px;
 }
 
-.nav-links li{
-    width:162px;
-    text-align:center;
+.info-icon{
+    width:24px;
+    height:24px;
+    border:1px solid #D9D9D9;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
 }
 
-.nav-links a{
-    display:block;
-    padding-top:16px;
-    border-top:2px solid transparent;
-    text-decoration:none;
-    transition:0.3s;
+.info-icon img{
+    width:10px;
+    height:10px;
 }
 
-.nav-links a:hover{
-    color:var(--main-color);
-    border-top:2px solid var(--main-color);
+.info-text{
+    font-size:16px;
+    font-weight:400;
+    color:#333333;
 }
 
-.nav-links a.active{
-    color:var(--main-color);
-    border-top:2px solid var(--main-color);
-}
+/****** body ***********/
+
 
 body {
     display: flex;
@@ -213,12 +249,22 @@ a {
     font-size: 16px;
 }
 
-.neutral-star {
-    color: var(--main-bg-color)
+.fa-solid {
+    color: var(--main-color);
 }
 
+.neutral-star {
+    color: var(--main-bg-color);
+}
+
+.card-rating {
+    display: flex;
+    gap: 2px;
+}
+
+
 .card-txt{
-    min-height:52px;
+    min-height:auto;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -271,11 +317,10 @@ a {
 }
 
 .hebergements-cards .card-content{
-    display:flex;
+      display:flex;
     flex-direction:column;
-    justify-content:space-between;
-    padding:10px 15px;
-    gap:8px;
+    padding:10px 10px;
+    gap:6px;
 }
 
 .card-title{
@@ -285,7 +330,8 @@ a {
 
 .card-subtitle{
     font-size:14px;
-    line-height:16px;
+    padding-top:5px;
+    padding-bottom: 3px;
 }
 
 .card-rating{
@@ -296,6 +342,7 @@ a {
 .star{
     width:12px;
     height:12px;
+
 }
 
 .show-more{
@@ -306,6 +353,7 @@ a {
 }
 
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
 }
@@ -347,7 +395,7 @@ a {
 }
 
 .populaires-cards .card-rating {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .populaires-cards{
@@ -531,6 +579,13 @@ footer{
     }
 
     /****** Search ***********/
+ .info{
+        margin-bottom:20px;
+    }
+
+    .info p{
+        font-size:14px;
+    }
 
     .search,
     .filters,
