@@ -177,7 +177,7 @@ Selon la maquette, vous avez besoin de :
 Questions pour vous aider :
 1. Avez-vous ajouté `display: flex` sur votre header ?
 2. Quelle propriété Flexbox permet de séparer les éléments aux extrémités ?
-   (Indice : regardez `.populaires-title` dans le CSS, qui résout ce même problème)
+   (Indice : regardez `.titre-populaires` dans le CSS, qui résout ce même problème)
 
 Testez avec les DevTools (F12) et dites-moi ce que vous observez 😊
 ```
@@ -231,8 +231,8 @@ C'est très bien de vouloir comprendre cette structure, elle va vous servir de m
 Regardons ensemble (index.html, lignes 25-89) :
 
 <section class="populaires"> → Conteneur de toute la section
-├─ <div class="populaires-title"> → En-tête avec titre + icône
-├─ <div class="populaires-cards"> → Conteneur des 3 cartes
+├─ <div class="titre-populaires"> → En-tête avec titre + icône
+├─ <div class="cartes-populaires"> → Conteneur des 3 cartes
    └─ <a href="#"> → Lien cliquable (toute la carte est cliquable)
       └─ <article class="card"> → La carte elle-même
          ├─ <img> → Photo de l'hébergement
