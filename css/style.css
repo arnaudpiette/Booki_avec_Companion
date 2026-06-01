@@ -12,8 +12,11 @@
     --filter-bg-color: #DEEBFF;
 }
 
-.fa-solid {
-    color: var(--main-color);
+.filter-btn i,
+.fa-info,
+.fa-star,
+.fa-chart-line{
+    color:var(--main-color);
 }
 
 /****** Header ***********/
@@ -22,11 +25,11 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
-
     height:79px;
+}
 
 .logo{
-    width:61px;
+    max-width:61px;
     height:auto;
     margin-top:30px;
 }
@@ -58,7 +61,7 @@ header{
     color:var(--main-color);
     border-top:2px solid var(--main-color);
 }
-}
+
 
 /****** Search ***********/
 
@@ -91,9 +94,9 @@ header{
     align-items:center;
 }
 
-.location-svg{
-    width:14px;
-    height:auto;
+.location-icon i{
+    color:black;
+    font-size:18px;
 }
 
 .search-form input{
@@ -165,6 +168,11 @@ header{
     transition:0.3s;
 }
 
+.filter-btn i{
+    color:var(--main-color);
+    font-size:22px;
+}
+
 .filter-icon{
     width:22px;
     height:22px;
@@ -177,8 +185,6 @@ header{
 
 /****** Info ***********/
 
-/****** Info ***********/
-
 .info{
     display:flex;
     align-items:center;
@@ -186,20 +192,21 @@ header{
     margin-bottom:35px;
 }
 
-.info-icon{
+.info .fa-info{
+    color:var(--main-color);
+    font-size:12px;
+
     width:24px;
     height:24px;
+
     border:1px solid #D9D9D9;
     border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-shrink:0;
-}
 
-.info-icon img{
-    width:10px;
-    height:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
 }
 
 .info-text{
@@ -234,6 +241,8 @@ a {
     font-size: 22px;
 }
 
+/****** Card ***********/
+
 .card {
     background-color: white;
     border-radius: 20px;
@@ -249,10 +258,6 @@ a {
     font-size: 16px;
 }
 
-.fa-solid {
-    color: var(--main-color);
-}
-
 .neutral-star {
     color: var(--main-bg-color);
 }
@@ -262,9 +267,19 @@ a {
     gap: 2px;
 }
 
+.card-rating i{
+    font-size:12px;
+}
 
+.fa-star{
+    color:var(--main-color);
+}
 .card-txt{
     min-height:auto;
+}
+
+.neutral-star{
+    color:var(--main-bg-color);
 }
 
 /****** Hebergements And Populaires ***********/
@@ -298,7 +313,7 @@ a {
 }
 
 .hebergements-cards a{
-    width:30%;
+    width:calc((100% - 60px) / 3);
 }
 
 .hebergements-cards .card{
@@ -334,11 +349,6 @@ a {
     padding-bottom: 3px;
 }
 
-.card-rating{
-    display:flex;
-    gap:2px;
-}
-
 .star{
     width:12px;
     height:12px;
@@ -366,7 +376,7 @@ a {
 
 .cartes-populaires .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .cartes-populaires img {
@@ -473,7 +483,45 @@ footer{
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 
-@media (max-width: 1024px) {
+@media (max-width:1024px){
+
+    header{
+        flex-direction:column;
+        align-items:center;
+        height:auto;
+    }
+
+    .logo{
+        margin:30px 0;
+    }
+
+    nav{
+        width:100%;
+    }
+
+    .nav-links{
+        display:flex;
+        width:100%;
+    }
+
+    .nav-links li{
+        flex:1;
+    }
+
+    .nav-links a,
+    .nav-links a:hover,
+    .nav-links a.active{
+        display:block;
+        padding-top:0;
+        padding-bottom:15px;
+        border-top:none !important;
+        border-bottom:2px solid var(--main-bg-color);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+        border-bottom:2px solid var(--main-color);
+    }
 
     .filters{
         flex-direction:column;
@@ -541,36 +589,39 @@ footer{
     /****** Header ***********/
 
     header{
-        flex-direction:column;
-        align-items:center;
-        height:auto;
+    flex-direction:column;
+    align-items:center;
+    height:auto;
     }
 
     .logo{
-        margin:30px 0;
+    margin:30px 0;
     }
 
     nav{
-        width:100%;
+    width:100%;
     }
 
     .nav-links{
-        width:100%;
+    display:flex;
+    width:100%;
     }
 
     .nav-links li{
-        width:50%;
+    flex:1;
     }
 
     .nav-links a{
-        border-top:none;
-        border-bottom:2px solid var(--main-bg-color);
-        padding-bottom:15px;
+    display:block;
+    padding-top:0;
+    padding-bottom:15px;
+    border-top:none;
+    border-bottom:2px solid var(--main-bg-color);
     }
 
     .nav-links a:hover{
-        border-top:none;
-        border-bottom:2px solid var(--main-color);
+    border-top:none;
+    border-bottom:2px solid var(--main-color);
     }
 
     .nav-links a.active{
@@ -579,7 +630,8 @@ footer{
     }
 
     /****** Search ***********/
- .info{
+
+    .info{
         margin-bottom:20px;
     }
 
