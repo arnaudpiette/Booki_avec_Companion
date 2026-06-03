@@ -102,7 +102,6 @@ header{
 .search-form input{
     width:195px;
     height:49px;
-
     border-top:1px solid var(--main-bg-color);
     border-bottom:1px solid var(--main-bg-color);
     border-left:none;
@@ -265,6 +264,7 @@ a {
 
 .card-rating i{
     font-size:12px;
+    padding-top: 5px;
 }
 
 .fa-star{
@@ -282,7 +282,7 @@ a {
 
 .hebergements-populaires{
     display:flex;
-    align-items:flex-start;
+    align-items:stretch;
     gap:30px;
 }
 
@@ -323,6 +323,7 @@ a {
     width:100%;
     height:124px;
     object-fit:cover;
+    object-position: 50% 65%;
     border-top-left-radius:20px;
     border-top-right-radius:20px;
 }
@@ -376,7 +377,7 @@ a {
 }
 
 .cartes-populaires img {
-    width: 25%;
+    min-width: 50%;
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -440,6 +441,14 @@ a {
     object-fit:cover;
 }
 
+.VieuxPort{
+    object-position: 50% 40%;
+}
+
+.Dame{
+    object-position: 50% 15%;
+}
+
 .titre-activite{
     padding:20px;
     font-size:16px;
@@ -481,44 +490,6 @@ footer{
 
 @media (max-width:1024px){
 
-    header{
-        flex-direction:column;
-        align-items:center;
-        height:auto;
-    }
-
-    .logo{
-        margin:30px 0;
-    }
-
-    nav{
-        width:100%;
-    }
-
-    .nav-links{
-        display:flex;
-        width:100%;
-    }
-
-    .nav-links li{
-        flex:1;
-    }
-
-    .nav-links a,
-    .nav-links a:hover,
-    .nav-links a.active{
-        display:block;
-        padding-top:0;
-        padding-bottom:15px;
-        border-top:none !important;
-        border-bottom:2px solid var(--main-bg-color);
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active{
-        border-bottom:2px solid var(--main-color);
-    }
-
     .filters{
         flex-direction:column;
         align-items:flex-start;
@@ -535,8 +506,9 @@ footer{
 
     .populaires{
         width:100%;
-        margin-top:50px;
     }
+
+
 
     .cartes-populaires{
         display:flex;
